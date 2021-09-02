@@ -3,7 +3,7 @@
     <div class="pacman-title"></div>
     <p>new for 1985</p>
     <h1>Pacman</h1>
-    <h2>General Assembly Edition</h2>
+    <h2>Retro Edition</h2>
   </header>
 </template>
 
@@ -21,10 +21,12 @@ export default {
 <style scoped lang="scss">
 .Logo {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
   width: 540px;
   height: 165px;
-  margin: 10px;
-  overflow-x: hidden;
 
   p {
     position: relative;
@@ -64,12 +66,13 @@ export default {
   }
   h2 {
     position: relative;
-    left: 50%;
-    top: -40%;
+    left: 60%;
+    top: -30%;
     font-family: "Damion", cursive;
+    font-size: 3.5em;
     margin: 0;
     color: pink;
-    transform: perspective(350px) rotateY(40deg) rotate(-8deg);
+    transform: perspective(180px) rotateY(35deg) rotate(-10deg);
     text-shadow: 0 0 5px red, 0 0 10px red, 0 0 10px red, 0 0 10px red,
       0 0 20px red, 0 0 30px red;
   }

@@ -1,22 +1,12 @@
+const path = require('path')
+
 module.exports = {
-    // css: {
-    //     loaderOptions: {
-    //         // scss: {
-    //         //     additionalData: `@import "@/assets/styles/animations.scss";`,
-    //         // },
-    //         scss: {
-    //             indentWidth: 4,
-    //             includePaths: ['absolute/path/a', 'absolute/path/b'],
-    //         },
-    //     },
-    // },
-    chainWebpack: config => {
-        config
-        .plugin('vue-loader')
-        .tap(options => {
-                console.log(options)
-                // modify the options...
-                return options
-            })
+    pluginOptions: {
+        'style-resources-loader': {
+            'preProcessor': 'scss',
+            'patterns': [
+                path.resolve(__dirname, './src/assets/styles/*.scss'),
+            ]
+        }
     }
-};
+}

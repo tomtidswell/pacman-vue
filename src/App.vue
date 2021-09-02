@@ -6,11 +6,13 @@
   </nav>
   <!-- <img alt="Vue logo" src="./assets/images/bg2reduced.jpeg"> -->
   <Logo />
+  <Game v-if="stage === 'game'" />
   <Loading v-if="stage === 'loading'" :msgs="['Welcome to Your Vue.js App']"/>
   <HighScores v-if="stage === 'high-scores'" :msgs="['Welcome to Your Vue.js App']"/>
 </template>
 
 <script>
+import Game from './components/Game.vue'
 import Logo from './components/Logo.vue'
 import Loading from './components/Loading.vue'
 import HighScores from './components/HighScores.vue'
@@ -18,6 +20,7 @@ import HighScores from './components/HighScores.vue'
 export default {
   name: 'App',
   components: {
+    Game,
     Logo,
     Loading,
     HighScores,
